@@ -45,6 +45,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\CharacterController2D.cs" />
+     <Compile Include="Assets\MainCaharacterMovement.cs" />
+     <Compile Include="Assets\MainCharacterMovement2.cs" />
+     <Compile Include="Assets\PantherBuck.cs" />
+     <Compile Include="Assets\Pickup.cs" />
      <Compile Include="Assets\ScrollBack.cs" />
      <Compile Include="Assets\Scroller.cs" />
  <Reference Include="Unity.Timeline.Editor">
