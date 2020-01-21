@@ -31,4 +31,13 @@ public class MainCaharacterMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch ,jump);
         jump = false;
     }
+
+    //Destroy Panther Buck When Touched
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Panther Buck"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }

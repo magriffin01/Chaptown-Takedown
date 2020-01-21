@@ -10,12 +10,12 @@ public class PantherBuck : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player 1"))
         {
-            //ScoreManager.instance.ChangeScore(buckValue);
+            ScoreManager.instance.ChangeScore(buckValue);
         }
 
         if (other.gameObject.CompareTag("Player 2"))
         {
-            //ScoreManager.instance.ChangeScore(buckValue);
+            ScoreManager.instance.ChangeScore(buckValue);
         }
     }
 }
