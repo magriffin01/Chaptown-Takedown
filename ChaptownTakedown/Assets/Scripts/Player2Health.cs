@@ -11,6 +11,8 @@ public class Player2Health : MonoBehaviour
     public Image damageImageP2;
     public float flashSpeed = 5f;
     public Color flashColor = new Color(1f, 0f, 0f, 0.1f);
+    public Animator animator;
+
 
     P2Movement player2Movement;
     //Player1Combat player1Combat;
@@ -33,6 +35,7 @@ public class Player2Health : MonoBehaviour
     {
         if (damaged)
         {
+            animator.SetTrigger("p2Hit");
             damageImageP2.color = flashColor;
         }
 

@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class EnemyTerritory : MonoBehaviour
 {
-    public BoxCollider2D territory;
-    GameObject player;
-    bool playerInTerritory;
+    public Animator animator;
+    public Transform enemyAttackPoint;
+    public Transform enemyTerritory;
+    public float enemyAttackRange = 1f;
+    public LayerMask playerLayers;
+    public int enemyAttackDamage = 10;
+    public float enemyAttackDelay = 1f;
 
-    public GameObject enemy;
-    //BasicEnemy basicenemy;
     EnemyHealth enemyHealth;
     Player1Health player1Health;
     Player2Health player2Health;
+    private float enemyAttackTimer;
 
-    public Transform target;
-    public float speed = 3f;
-    public float attack1Range = 1f;
-    public int attack1Damage = 1;
-
+    //Physics2D.OverlapCircleAll(enemyTerritory.position, enemyAttackRange, playerLayers);
+    //   public Transform target;
 
     // Start is called before the first frame update
     void Start()
@@ -26,63 +26,54 @@ public class EnemyTerritory : MonoBehaviour
         player1Health = GetComponent<Player1Health>();
         player2Health = GetComponent<Player2Health>();
         enemyHealth = GetComponent<EnemyHealth>();
+        enemyAttackTimer = 0;
+        //Collider2D[]enterTerritory = Physics2D.OverlapCircleAll(enemyTerritory.position, enemyAttackRange, playerLayers);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerInTerritory == true && enemyHealth.currentHealth > 0)
+        enemyAttackTimer += Time.deltaTime;
+        Collider2D[] enterTerritory = Physics2D.OverlapCircleAll(enemyTerritory.position, enemyAttackRange, playerLayers);
+        foreach (Collider2D player in enterTerritory)
         {
-            MoveToPlayer();
-            Attack();
-        }
+            if (enemyHealth.currentHealth > 0 && enemyAttackTimer >= enemyAttackDelay)
+            {
+                Attack();
+            }
 
-        if (playerInTerritory == false)
-        {
-            Rest();
+            else
+            {
+                Rest();
+            }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInTerritory = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInTerritory = false;
-        }
-    }
 
     void Attack()
     {
-        if (player1Health.currentHealthP1 > 0)
+		animator.SetTrigger("enemyAttack");
+        enemyAttackTimer = 0;
+        Collider2D[]hitPlayers = Physics2D.OverlapCircleAll(enemyAttackPoint.position, enemyAttackRange, playerLayers);
+        foreach(Collider2D player in hitPlayers)
         {
-            player1Health.TakeDamage(attack1Damage);
-        }
-
-        if (player2Health.currentHealthP2 > 0)
-        {
-            player2Health.TakeDamage(attack1Damage);
-        }
-    }
-
-
-    public void MoveToPlayer()
-    {
-        if (Vector2.Distance(transform.position, target.position) > attack1Range)
-        {
-            transform.Translate(new Vector2(speed * Time.deltaTime, 0));
+            player.GetComponent<Player1Health>().TakeDamage(enemyAttackDamage);
+            // how do I make both players vulnerable to enemy damage independently?
+            // i.e. can I make them both lose health in a way that doesn't force them both to lose health when just one is attacked?
         }
     }
+
 
     public void Rest()
     {
 
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (enemyAttackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(enemyAttackPoint.position, enemyAttackRange);
     }
 }

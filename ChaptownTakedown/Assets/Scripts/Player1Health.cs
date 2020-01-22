@@ -11,9 +11,11 @@ public class Player1Health : MonoBehaviour
     public Image damageImageP1;
     public float flashSpeed = 5f;
     public Color flashColor = new Color(1f, 0f, 0f, 0.1f);
+	public Animator animator;
 
-    P1Movement player1Movement;
+	P1Movement player1Movement;
     Player1Combat player1Combat;
+    
 
     bool isDead;
     bool damaged;
@@ -22,7 +24,6 @@ public class Player1Health : MonoBehaviour
     void Awake()
     {
         player1Movement = GetComponent<P1Movement>();
-        currentHealthP1 = startingHealthP1;
         player1Combat = GetComponent<Player1Combat>();
         damaged = false;
         isDead = false;
@@ -33,7 +34,8 @@ public class Player1Health : MonoBehaviour
     {
         if (damaged)
         {
-            damageImageP1.color = flashColor;
+			animator.SetTrigger("p1Hit");
+			damageImageP1.color = flashColor;
         }
 
         else
