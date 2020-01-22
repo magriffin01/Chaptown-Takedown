@@ -8,14 +8,10 @@ public class PantherBuck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player 1"))
+        if(other.gameObject.CompareTag("Player"))
         {
             ScoreManager.instance.ChangeScore(buckValue);
         }
 
-        if (other.gameObject.CompareTag("Player 2"))
-        {
-            ScoreManager.instance.ChangeScore(buckValue);
-        }
     }
 }

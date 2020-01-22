@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{A0D8408E-EC90-90DB-D40D-A8E3A66119FB}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PantherBuck.cs">
+    <Files>
+      <File FileName="Assets/EnemyTerritory.cs" Line="7" Column="31" />
+      <File FileName="Assets/Player2Movement.cs" Line="33" Column="39" />
+      <File FileName="Assets/BasicEnemy.cs" Line="39" Column="6" />
+      <File FileName="Assets/PlayerHealth.cs" Line="70" Column="1" />
+      <File FileName="Assets/EnemyHealth.cs" Line="8" Column="1" />
+      <File FileName="Assets/Player2Health.cs" Line="27" Column="24" />
+      <File FileName="Assets/P2Movement.cs" Line="16" Column="5" />
+      <File FileName="Assets/Scripts/PantherBuck.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d12b2d8d-b02f-42d1-a96d-ec9ab4e66cf5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCharacterMovement2 : MonoBehaviour
+public class P1Movement : MonoBehaviour
 {
     public CharacterController2D controller;
 
@@ -10,9 +10,14 @@ public class MainCharacterMovement2 : MonoBehaviour
 
     float horizontalMove = 0f;
 
-    bool jump = false;
-    bool crouch = false;
+    bool jump;
+    bool crouch;
 
+    void Start()
+    {
+        jump = false;
+        crouch = false;
+    }
 
     // Start is called before the first frame update
     void Update()
