@@ -8,6 +8,7 @@ TagManager:
   - Player 2
   - Panther Buck
   - Enemy
+  - Base
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - 
   - Enemy
   - Player
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - Base
   - 
   - 
   - 
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Environment
+    uniqueID: 2602381083
     locked: 0
