@@ -9,6 +9,7 @@ public class HealthPotion : MonoBehaviour
     Player1Health player1Health;
     Player2Health player2Health;
     public Transform potionTerritory;
+    public int increaseAmount;
 
     void Start()
     {
@@ -37,14 +38,14 @@ public class HealthPotion : MonoBehaviour
         foreach (Collider2D player in enterPlayer1)
         {
             Destroy(gameObject);
-            player.GetComponent<Player1Health>().TakeDamage(-10);
+            player.GetComponent<Player1Health>().TakeDamage(increaseAmount);
         }
 
         Collider2D[] enterPlayer2 = Physics2D.OverlapCircleAll(potionTerritory.position, 1, player2Layers);
         foreach (Collider2D player in enterPlayer2)
         {
             Destroy(gameObject);
-            player.GetComponent<Player2Health>().TakeDamage(-10);
+            player.GetComponent<Player2Health>().TakeDamage(increaseAmount);
         }
     }
 }
