@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyTerritory.cs" />
+    <Compile Include="Assets\Scripts\HealthPotion.cs" />
     <Compile Include="Assets\Scripts\P1Movement.cs" />
     <Compile Include="Assets\Scripts\P2Movement.cs" />
     <Compile Include="Assets\Scripts\PantherBuck.cs" />
