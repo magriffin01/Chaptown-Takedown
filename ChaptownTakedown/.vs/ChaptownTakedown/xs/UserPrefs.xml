@@ -1,18 +1,24 @@
-﻿<Properties StartupConfiguration="{A0D8408E-EC90-90DB-D40D-A8E3A66119FB}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HealthPotion.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/P2Movement.cs">
     <Files>
       <File FileName="Assets/Scripts/Player1Combat.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player2Combat.cs" />
+      <File FileName="Assets/Scripts/Player2Combat.cs" Line="1" Column="2" />
       <File FileName="Assets/Scripts/PantherBuck.cs" />
-      <File FileName="Assets/Scripts/EnemyTerritory.cs" />
+      <File FileName="Assets/Scripts/EnemyTerritory.cs" Line="9" Column="5" />
       <File FileName="Assets/Scripts/Player1Health.cs" />
-      <File FileName="Assets/ScrollerLeftNoBody.cs" />
-      <File FileName="Assets/Scripts/HealthPotion.cs" Line="11" Column="38" />
+      <File FileName="Assets/ScrollerLeftNoBody.cs" Line="20" Column="2" />
+      <File FileName="Assets/Scripts/HealthPotion.cs" Line="52" Column="1" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DamagePotion.cs" Line="45" Column="1" />
+      <File FileName="Assets/Scripts/P1Movement.cs" Line="12" Column="27" />
+      <File FileName="Assets/Scripts/P2Movement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Assembly-CSharp.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4cb30932-e4ce-4d94-84e3-a4b0467336e8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
