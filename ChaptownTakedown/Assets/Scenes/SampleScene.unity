@@ -470,10 +470,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286743702}
-  - component: {fileID: 286743703}
   - component: {fileID: 286743704}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GroundMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,27 +493,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &286743703
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286743701}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!114 &286743704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,10 +502,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 286743701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bc1f52b9f884fe089561f5afa5f90b, type: 3}
+  m_Script: {fileID: 11500000, guid: 46e31a5c9a9d043908a53c879fef7ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
 --- !u!1 &289078904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,7 +2171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125.7, y: -11.309998}
+  m_AnchoredPosition: {x: 125.69995, y: -11.310059}
   m_SizeDelta: {x: 167, y: 23.619995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1230597366
@@ -2327,7 +2304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.299988, y: -20.700012}
+  m_AnchoredPosition: {x: 25.300049, y: -20.699951}
   m_SizeDelta: {x: 12, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464888737
@@ -4369,6 +4346,7 @@ GameObject:
   - component: {fileID: 1883679208}
   - component: {fileID: 1883679205}
   - component: {fileID: 1883679210}
+  - component: {fileID: 1883679209}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -4528,6 +4506,18 @@ MonoBehaviour:
   animator: {fileID: 1883679210}
   maxHealth: 100
   currentHealth: 100
+--- !u!114 &1883679209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883679202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e31a5c9a9d043908a53c879fef7ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1883679210
 Animator:
   serializedVersion: 3
