@@ -23,6 +23,7 @@ public class PlatformTrigger : MonoBehaviour
     {
         // platform.transform.position += new Vector3 (0, -3);
         nextPos = pos2.position;
+        Debug.Log("huh");
     }
 
     void Update()

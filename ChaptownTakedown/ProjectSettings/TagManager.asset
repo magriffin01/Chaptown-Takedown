@@ -9,6 +9,7 @@ TagManager:
   - Panther Buck
   - Enemy
   - Base
+  - Platform
   layers:
   - Default
   - TransparentFX
