@@ -13,7 +13,7 @@ public class BackButton : MonoBehaviour
 
 	public void OnClick()
 	{
-		SceneManager.LoadScene("MENU");
+		SceneManager.LoadScene(0);
 		//Application.LoadLevel(3);
 	}
 }
