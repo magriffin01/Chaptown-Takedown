@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamagePotion : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DamagePotion : MonoBehaviour
 	}
 
 	void Update()
-	{
+	{ 
 		Collider2D[] enterHealthZone1 = Physics2D.OverlapCircleAll(potionTerritory.position, 1, player1Layers);
 		foreach (Collider2D player in enterHealthZone1)
 		{
@@ -51,4 +52,5 @@ public class DamagePotion : MonoBehaviour
 			player2Damage.bulletDamage += damageIncrease;
 		}
 	}
+
 }
