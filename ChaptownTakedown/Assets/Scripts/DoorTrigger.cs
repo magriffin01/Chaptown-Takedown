@@ -9,12 +9,11 @@ public class DoorTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Touched");
-        door.transform.position = new Vector2 (0, -1);
+        door.transform.position += new Vector3 (0, 2);
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        door.transform.position = new Vector2 (0, -2);
+        door.transform.position += new Vector3 (0, -2);
     }
 }
