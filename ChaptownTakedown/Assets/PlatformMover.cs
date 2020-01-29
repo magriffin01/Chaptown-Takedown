@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    public Transform platform;
+    public Rigidbody2D platform;
+
+    public float ThrustUp = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,13 @@ public class PlatformMover : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        //platform.transform.position = Vector3.Mo
+        platform.AddForce(transform.up * ThrustUp);
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        platform.AddForce(transform.up * -90f);
     }
 }
