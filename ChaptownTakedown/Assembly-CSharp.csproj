@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\P1Movement.cs" />
      <Compile Include="Assets\Scripts\P2Movement.cs" />
      <Compile Include="Assets\Scripts\PantherBuck.cs" />
+     <Compile Include="Assets\Scripts\PlatformTrigger.cs" />
      <Compile Include="Assets\Scripts\Player1Combat.cs" />
      <Compile Include="Assets\Scripts\Player1Health.cs" />
      <Compile Include="Assets\Scripts\Player2Combat.cs" />
